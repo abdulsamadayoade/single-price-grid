@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(204, 43%, 93%);
+    font-family: "Karla", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "box1 box1"
+        "box2 box3";
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+.box {
+    padding: 20px 40px;
+}
+
+.box2, 
+.box3 {
+    padding-bottom: 50px;
+}
+
+.box1 {
+    grid-area: box1;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.box2 {
+    grid-area: box2;
+    background-color: hsl(179, 62%, 43%);
+    color: hsl(204, 43%, 93%);
+    border-bottom-left-radius: 5px;
+}
+
+.box3 {
+    grid-area: box3;
+    background-color: hsla(179, 78%, 36%, 0.55);
+    color: hsl(204, 43%, 93%);
+    border-bottom-right-radius: 5px;
+}
+
+h2 {
+    color: hsl(179, 62%, 43%);
+}
+
+.box1 h3 {
+    color: hsl(71, 73%, 54%);
+}
+
+.box1 p {
+    color: hsl(218, 22%, 67%);
+    line-height: 1.6;
+}
+
+p.pricing {
+    display: flex;
+    align-items: center;
+}
+
+span.price {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 15px;
+    vertical-align: center;
+}
+
+span.month {
+    font-weight: 200;
+    opacity: .5;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: hsl(71, 73%, 54%);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(14, 122, 119, 0.9);
+    color: hsl(204, 43%, 93%);
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 30px;
+    outline: none;
+    padding: 20px 30px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    color: hsl(204, 43%, 93%);
+    opacity: .9;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+li:not(:last-child) {
+    padding-bottom: 5px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "box1"
+        "box2"
+        "box3";
+    }
+
+    .box2, 
+    .box3 {
+        padding-bottom: 30px;
+    }
+}
