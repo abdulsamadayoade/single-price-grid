@@ -13,7 +13,8 @@ body {
     grid-template-areas: 
         "box1 box1"
         "box2 box3";
-    max-width: 1000px;
+    width: 1000px;
+    max-width: 100%;
     margin: 50px auto;
     padding: 50px;
 }
